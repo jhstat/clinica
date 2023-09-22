@@ -120,7 +120,7 @@ def compute_fmri_path(source_dir, csv_dir, subjs_list, conversion_dir):
     mri_list = mri_list[
         mri_list.SEQUENCE.str.contains("MRI")
     ]  # 'MRI' includes all fMRI and fMRI scans, but not others
-    unwanted_sequences = ["MB"]
+    unwanted_sequences = []
     mri_list = mri_list[
         mri_list.SEQUENCE.map(
             lambda x: not any(subs in x for subs in unwanted_sequences)
