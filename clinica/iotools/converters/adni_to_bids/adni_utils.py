@@ -1302,7 +1302,7 @@ def create_file(image, modality, bids_dir, mod_to_update):
             "output_path": "anat",
             "output_filename": "_T1w",
             "to_center": True,
-            "json": "n",
+            "json": "y",
         },
         "dwi": {
             "output_path": "dwi",
